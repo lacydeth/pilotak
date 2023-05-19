@@ -14,4 +14,13 @@ while (!sr.EndOfStream)
 }
 sr.Close();
 
-Console.WriteLine($"3. feladat: {pilotak.Count}");
+Console.WriteLine($"3. feladat: {pilotak.Count()}");
+
+Console.WriteLine($"4. feladat: {pilotak.Last().VersenyzoNev}");
+
+Console.WriteLine("5. feladat:");
+pilotak.Where(x => DateTime.Parse(x.VersenyzoSzuletes) > DateTime.Parse("1991.01.01.")).ToList().ForEach(x => Console.WriteLine(x.VersenyzoNev));
+
+Console.WriteLine($"6. feladat: {pilotak.Where(x => x.VersenyzoRajtszam != 0).OrderBy(x => x.VersenyzoRajtszam).First().VersenyzoNemzetiseg}");
+
+Console.WriteLine($"7. feladat:");

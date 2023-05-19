@@ -14,4 +14,4 @@ while (!sr.EndOfStream)
 }
 sr.Close();
 
-Console.WriteLine($"3. feladat: {pilotak.Count} fő");
+Console.WriteLine($"3. feladat: {pilotak.Count}");
